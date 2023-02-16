@@ -1,4 +1,5 @@
 import "./style.css";
+import Swal from "sweetalert2";
 
 const buttonEl = document.querySelector("#button");
 const inputEl = document.querySelector("#getValue");
@@ -22,11 +23,24 @@ buttonEl.addEventListener("click", async (event) => {
       IBGE: ${data.ibge},
       DDD: ${data.ddd},
       SIAFI: ${data.siafi}`;
+
+      return data;
     } catch (error) {
-      console.log(error.message);
+      Swal.fire({
+        title: "Error!",
+        text: `${error.message}. Por favor, volte mais tarde!`,
+        icon: "error",
+        confirmButtonText: "Voltar",
+      });
+
+      return error.message;
     }
   } else {
-    preEl.innerText =
-      "O CEP informado não é válido. Por favor, insira um CEP válido!";
+    Swal.fire({
+      title: "Error!",
+      text: "O CEP informado não é válido!",
+      icon: "error",
+      confirmButtonText: "Voltar",
+    });
   }
 });
