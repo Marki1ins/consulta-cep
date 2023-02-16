@@ -1,0 +1,61 @@
+body {
+  background-color: #000;
+  font-family: "Fira Code, Helvetica, Arial", sans-serif;
+}
+
+form {
+  background-color: #232723;
+  border-radius: 7px;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  margin: 120px auto;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+form h1,
+h2,
+#result {
+  color: #fff;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+form #getValue {
+  width: 180px;
+  padding: 8px;
+  border: 0px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+form #button {
+  background-color: #a2e046;
+  width: 144px;
+  padding: 8px;
+  border: 0px;
+  margin-bottom: 15px;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+form #result {
+  background-color: #393d39;
+  border-radius: 7px;
+  border: 0px;
+  width: 95%;
+  padding: 20px;
+  line-height: 1.9;
+  outline: none;
+  cursor: default;
+}
